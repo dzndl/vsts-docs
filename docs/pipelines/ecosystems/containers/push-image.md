@@ -1,11 +1,8 @@
 ---
 title: Push an image
 description: Push container images
-ms.prod: devops
-ms.technology: devops-cicd
 ms.topic: quickstart
 ms.assetid: 3ce59600-a7f8-4a5a-854c-0ced7fdaaa82
-ms.manager: mijacobs
 ms.author: atulmal
 author: azooinmyluggage
 ms.date: 08/28/2019
@@ -114,7 +111,7 @@ The following steps walk through the creation of Docker registry service connect
 11. In the dialog, enter values for the following fields:
 
    - **Docker Registry:** `https://gcr.io/[PROJECT-ID]`, where `[PROJECT-ID]` is the name of your GCP project.
-   - ****Docker ID:** `_json_key`
+   - **Docker ID:** `_json_key`
    - **Docker Password:** Paste the contents of `azure-pipelines-publisher-oneline.json`
    - **Service connection name:** `gcrServiceConnection`
 

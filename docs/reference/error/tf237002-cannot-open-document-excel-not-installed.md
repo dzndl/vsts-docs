@@ -2,13 +2,11 @@
 title: TF237002-Cannot open the document... 
 titleSuffix: Azure DevOps & TFS
 description: Appears when a Team Foundation add-in has been disabled in an Office client.
-ms.prod: devops
 ms.technology: devops-agile
 ms.assetid: e10dc22d-2d09-40d8-8a90-37f6f54412ee
-ms.manager: mijacobs
 ms.author: kaelli
 author: KathrynEE
-ms.topic: Troubleshooting
+ms.topic: troubleshooting
 ms.date: 09/28/2018  
 ---
 

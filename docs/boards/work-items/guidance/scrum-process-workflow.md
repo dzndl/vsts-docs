@@ -4,10 +4,8 @@ titleSuffix: Azure Boards
 description: How to guide for using the Scrum process  work item types and workflow to track work in Azure Boards, Azure DevOps, & Team Foundation Server 
 ms.custom: work-items
 ms.technology: devops-agile
-ms.prod: devops
 ms.assetid: 34c866ea-a130-4371-bfc4-a3d9f87dccca
 ms.topic: conceptual
-ms.manager: mijacobs
 ms.author: kaelli
 author: KathrynEE
 monikerRange: '>= tfs-2013'
@@ -16,7 +14,7 @@ ms.date: 11/19/2018
 
 # Scrum process work item types and workflow  
 
-[!INCLUDE [temp](../../includes/version-vsts-tfs-all-versions.md)]
+[!INCLUDE [temp](../../includes/version-all.md)]
 
 To plan a software project and track software defects using Scrum, teams use the product backlog item (PBI) and bug work item types (WITs). To gain insight into a portfolio of features, scenarios, or user experiences, product owners and program managers can map PBIs and bugs to features. When teams work in sprints, they define tasks which automatically link to PBIs and bugs.
 
@@ -54,7 +52,7 @@ Use the following guidance and that provided for [fields used in common across w
 <tbody valign="top">
 <tr>
     <td width="20%"><p><a href="../../queries/query-numeric.md" data-raw-source="[Effort](../../queries/query-numeric.md)">Effort</a></p></td>
-    <td><p>Estimate the amount of work required to complete a PBI using any unit of measurement your team prefers, such as story points or time. A numeric value is required. </p><p>Agile <a href="../../../report/dashboards/team-velocity.md" data-raw-source="[velocity charts](../../../report/dashboards/team-velocity.md)">velocity charts</a> and <a href="../../sprints/forecast.md" data-raw-source="[forecast](../../sprints/forecast.md)">forecast</a> tools reference the values in this field. For additional guidance, see the <a href="https://msdn.microsoft.com/library/hh765979" data-raw-source="[Estimating](https://msdn.microsoft.com/library/hh765979)">Estimating</a> white paper.</p></td></tr>
+    <td><p>Estimate the amount of work required to complete a PBI using any unit of measurement your team prefers, such as story points or time. A numeric value is required. </p><p>Agile <a href="../../../report/dashboards/team-velocity.md" data-raw-source="[velocity charts](../../../report/dashboards/team-velocity.md)">velocity charts</a> and <a href="../../sprints/forecast.md" data-raw-source="[forecast](../../sprints/forecast.md)">forecast</a> tools reference the values in this field. For additional guidance, see the <a href="/previous-versions/visualstudio/visual-studio-2013/hh765979(v=vs.120)" data-raw-source="[Estimating](/previous-versions/visualstudio/visual-studio-2013/hh765979(v=vs.120))">Estimating</a> white paper.</p></td></tr>
 <tr>
     <td><p><a href="../../queries/query-numeric.md" data-raw-source="[Business Value](../../queries/query-numeric.md)">Business Value</a></p></td>
     <td><p>Specify a number that captures the relative value of a PBI compared to other PBIs. The higher the number, the greater the business value.</p></td>
@@ -138,8 +136,6 @@ When teams estimate work using hours or days, they define tasks and the **Remain
     <td width="18%"><p><a href="../../queries/query-numeric.md" data-raw-source="[Remaining Work](../../queries/query-numeric.md)">Remaining Work</a> </p></td>
     <td><p>Indicate how many hours or days of work remain to complete a task. As work progresses, update this field. It&#39;s used to calculate capacity charts, the sprint burndown chart, and the <a href="../../../report/sql-reports/sprint-burndown-scrum.md" data-raw-source="[Sprint Burndown (Scrum)](../../../report/sql-reports/sprint-burndown-scrum.md)">Sprint Burndown (Scrum)</a> report.<br />If you divide a task into subtasks, specify Remaining Work for the subtasks only. You can specify work in any unit of measurement your team chooses.</p></td>
 </tr>
-
-
 <tr>
     <td><p><a href="../../queries/query-numeric.md" data-raw-source="[Activity](../../queries/query-numeric.md)">Activity</a> </p></td>
     <td><p>Select the type of activity this task represents when your team estimates sprint capacity by activity.</p></td></tr>
@@ -151,7 +147,7 @@ When teams estimate work using hours or days, they define tasks and the **Remain
 
 ### Test PBIs  
 
-From the web portal or Test Manager, you can [create test cases that automatically link to a PBI or bug](../../../test/create-test-cases.md). Or, you can link a PBI or bug to a test case from the ![Links tab icon](../../backlogs/media/icon-links-tab-wi.png) (links tab).  
+From the web portal or Test Manager, you can [create test cases that automatically link to a PBI or bug](../../../test/create-test-cases.md). Or, you can link a PBI or bug to a test case from the :::image type="icon" source="../../backlogs/media/icon-links-tab-wi.png" border="false"::: (links tab).  
 
 
 <img src="media/IC793453.png" alt="Web portal, Select the test suite and add a test case" style="border: 1px solid #C3C3C3;" /> 
@@ -161,7 +157,7 @@ The test case contains a number of fields, many of which are automated and integ
 
 ![Scrum Test case work item form](media/scrum-test-case-form.png)  
 
-The ![Links tab icon](../../backlogs/media/icon-links-tab-wi.png) (links tab) captures the links to all the PBIs and bugs in a test case. By linking PBIs and bugs to test cases, the team can track the progress made in testing each item.  
+The :::image type="icon" source="../../backlogs/media/icon-links-tab-wi.png" border="false"::: (links tab) captures the links to all the PBIs and bugs in a test case. By linking PBIs and bugs to test cases, the team can track the progress made in testing each item.  
 
 ### Track code defects
 
@@ -182,7 +178,7 @@ You can [create bugs from the web portal web portal, Visual Studio, or when test
 
 Use the impediment WIT to track events that may block progress or ship a PBI. Use the Bug WIT exclusively to track code defects.  
 
-You can add an impediment from the [New work item widget](../../../report/dashboards/widget-catalog.md#new-work-item-widget) added to a [team dashboard](../../../Report/dashboards.md), or from the **New** menu on the Queries page. 
+You can add an impediment from the [New work item widget](../../../report/dashboards/widget-catalog.md#new-work-item-widget) added to a [team dashboard](../../../report/dashboards/dashboards.md), or from the **New** menu on the Queries page. 
 
 ![Add work item from a New work item widget](media/scrum-new-work-item-widget.png)  
 
@@ -287,7 +283,3 @@ Work item forms displayed in a client and the web portal for TFS 2015 and earlie
 </tr>
 </tbody>
 </table>
-
-
-
-[!INCLUDE [temp](../../../includes/help-support-shared.md)]

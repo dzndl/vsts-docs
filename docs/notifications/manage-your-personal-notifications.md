@@ -1,279 +1,272 @@
 ---
 title: Manage personal notification settings
 titleSuffix: Azure DevOps
-description: Get notified when changes occur to source code, git, work items, and builds in Azure DevOps and Team Foundation Server (TFS)
+description: Get personally notified, when changes occur to source code, git, work items, and builds in Azure DevOps.
 ms.technology: devops-collab
-ms.prod: devops
 ms.assetid: 644687b3-e30e-46b0-8d3e-3d4a4e34d13a
-ms.manager: mijacobs
+ms.custom: contperf-fy22q1
+ms.topic: how-to
 ms.author: chcomley
 author: chcomley
-ms.topic: conceptual
-ms.date: 01/23/2020
-monikerRange: '>= tfs-2013'
+ms.date: 07/19/2021
+monikerRange: '<= azure-devops'
 ---
 
-# Manage your notifications
+# Manage your personal notifications
 
-[!INCLUDE [version-vsts-tfs-all-versions](../includes/version-vsts-tfs-all-versions.md)]
+[!INCLUDE [version-all](../includes/version-all.md)]
 
-As changes occur to work items, code reviews, source control files, and builds, you can receive email notifications for alerts that you define. For example, you can set an alert to be notified whenever a bug that you opened is resolved or a work item is assigned to you. You can set personal alerts, as described in this article, or [team or project alerts](manage-team-group-notifications.md).
+You can manage your personal notifications in the following ways:
+
+- View your notifications
+- Set notifications just for yourself
+- View and edit all notification subscriptions
+- Add a custom notification subscription
+- Unsubscribe or opt out of a team or project notification subscription
+
+Personal notifications get sent to you in the form of an email as changes occur to builds, code, pipelines, work, artifacts, extensions, releases, and more.
+
+For information about team and project-level notifications, see [Team and project-level notifications](about-notifications.md#team-and-project-level-notifications) and [Manage team or group notifications](manage-team-group-global-organization-notifications.md).
 
 [!INCLUDE [note-earlier-tfs-version](includes/note-earlier-tfs-version.md)]
 
-
-::: moniker range=">= tfs-2017"  
-
-In this tutorial, learn how to do the following tasks:
-
-> [!div class="checklist"]
-> * View your notifications
-> * Add a custom subscription
-> * Unsubscribe or opt out of a team or project subscription
-
-::: moniker-end  
-
 [!INCLUDE [note-smtp-server](includes/note-smtp-server.md)]
 
-::: moniker range="azure-devops"  
+::: moniker range="azure-devops"
+
+## Prerequisites
+
+- Every user can manage their personal notifications
+- See [about notifications](about-notifications.md)
 
 ## View your personal notifications
 
-> [!NOTE]   
-> To enable the new user interface for the Project Permissions Settings Page, see [Enable preview features](../project/navigation/preview-features.md).
+The following table shows notification event examples. For more information, see a full representation in [About notifications](about-notifications.md#team-and-project-level-notifications).
 
-#### [Preview page](#tab/preview-page) 
+| Item                | Notification event examples |
+|---------------------|---------------------------------------------------------|
+| Work item           | assigned, unassigned, comments                          |
+| Code reviews        | updated, completed                                      |
+| Pull request        | added or removed reviewer, completion failure, comments |
+| Source control file | created, updated                                        |
+| Build               | completion success, completion failure                  |
 
-From the web portal, select the icon with your initials or picture, and then select **Notification settings** from the drop-down menu.
+To access the Preview features options, open your profile menu. The profile menu appears, as shown, based on whether the **New Account Manager** feature is enabled.
+#### [New Account Manager enabled](#tab/new-account-enabled)
 
-   ![Navigate to personal notifications page](media/personal-notifications-preview.png)  
+1. Sign in to your organization (```https://dev.azure.com/{yourorganization}```).
 
-#### [Current page](#tab/current-page) 
+1. Select :::image type="icon" source="../media/icons/user-settings-gear.png" border="false":::  **User settings**, and then select **Notifications** from the resulting list.
 
-From the web portal, select the icon with your initials or picture, and then select **Notification settings** from the drop-down menu.
+   :::image type="content" source="media/personal-notifications-preview.png" alt-text="Preview page of personal notifications.":::
 
-   ![Navigate to personal notifications page](media/nav-personal-notifications-hub-newnav.png)  
+#### [New Account Manager not enabled](#tab/new-account-not-enabled)
+
+1. Sign in to your organization (```https://dev.azure.com/{yourorganization}```).
+
+1. Open your **User settings**, and then select **Notification settings** from the resulting list.
+
+   ![Go to personal notifications, current page](media/nav-personal-notifications-hub-newnav.png)  
 
 ***
 
 ::: moniker-end  
 
+::: moniker range=">= tfs-2017 < azure-devops"
 
-::: moniker range=">= tfs-2017 <= azure-devops-2019"  
-
-> [!div class="mx-imgBorder"] 
->![Navigate to personal notifications page](media/nav-personal-notifications-hub.png) 
-::: moniker-end  
-
+> [!div class="mx-imgBorder"]
+>![Go to the personal notifications page.](media/nav-personal-notifications-hub.png)
+::: moniker-end
 
 ::: moniker range="< tfs-2017"  
 
-## Set alerts just for yourself
+## Set personal alerts
 
-1. Open alerts management (My alerts from your profile menu). If you don't see this option, then you must [configure an SMTP server to support TFS](/azure/devops/server/admin/setup-customize-alerts). 
-	
-	![Manage individual alerts from the web portal](media/set-alerts-from-profile-menu.png)
+In this context, an *alert* is effectively the same as a *notification*.
 
-2. Enter one or more email addresses. Separate addresses with a semi-colon. 
-	
-	![Set email address for alerts](media/personal/ALM_AN_Email.png)  
+1. Open **My alerts** from your profile menu. If you don't see this option, then  [configure an SMTP server to support TFS](/azure/devops/server/admin/setup-customize-alerts).
 
-3.	Select the check box for each alert of interest. **My work items** and **My build** refer to work items and builds that you created.
-	
-	![Manage TFS alerts](media/personal/ALM_AN_ManageAlerts.png)
+   ![Manage individual alerts from the web portal](media/set-alerts-from-profile-menu.png)
 
-	Alert templates reference a customizable query. 
-	
-	The following alert types appear when your project is provisioned with Git for version control:  
-	- **A commit is pushed to this project**  
-	- **A pull request I've participated in is created or updated**  
-	- **A build quality changes** 
+1. Enter one or more email addresses. Separate addresses with a semi-colon.
 
-	> [!TIP]    
-	> When you clear an alert, you also clear all email addresses defined for the alert.  
+   ![Set email address for alerts](media/personal/ALM_AN_Email.png)  
 
-4.	For more options, open custom alerts and choose one of the options available. Also, you can open a basic alert and modify its settings, such as changing the email format from HTML to plain text or SOAP. 
-	
-	![Open custom alerts](media/personal/ALM_AN_CustomAlerts.png)
+1. Select the check box for each alert of interest. **My work items** and **My build** refer to work items and builds that you created.
 
-5.	Define alert filters in the same way you define query filters.
-	
-	![Fill out the custom alerts form](media/personal/ALM_AN_DefiningAlerts.png)
-	
-	For a list of available fields, see [Index of work item fields](../boards/work-items/guidance/work-item-field.md).
+   ![Manage TFS alerts](media/personal/ALM_AN_ManageAlerts.png)
 
-6.	For even more options, open the Select New Alert Template. 
-	
-	![Open all alert options](media/personal/ALM_AN_Options.png)
+   Alert templates reference a customizable query.
 
-7.	Choose from one of the several alert types listed.
-	
-	![Choose an alert type from all options listed](media/personal/ALM_AN_Templates.png)
+   The following alert types appear when your project is provisioned with Git for version control:  
+   - A commit is pushed to this project
+   - A pull request I've participated in is created or updated
+   - A build quality changes
 
-::: moniker-end  
+   > [!TIP]
+   > When you clear an alert, you also clear all email addresses defined for the alert.  
 
-::: moniker range=">= tfs-2017"  
+   Open custom alerts for more options. Also, you can open a basic alert and modify its settings, such as change the email format from HTML to plain text or SOAP.
 
-## View all subscriptions
+   ![Open custom alerts](media/personal/ALM_AN_CustomAlerts.png)
 
-This view shows all subscriptions that you've created or that have been created by an administrator. Subscriptions let you control what you are notified about. Subscribed notifications are indicated with the State as **On**.
+1. Define alert filters in the same way you define query filters.
+
+   ![Fill out the custom alerts form](media/personal/ALM_AN_DefiningAlerts.png)
+
+   For a list of available fields, see [Index of work item fields](../boards/work-items/guidance/work-item-field.md).
+
+1. For even more options, select **Others...**, and then choose **Select New Alert Template**.
+
+   ![Open all alert options](media/personal/ALM_AN_Options.png)
+
+1. Choose an alert type from the several alert types listed, and then select **OK**.
+
+   ![Choose an alert type from all options listed](media/personal/ALM_AN_Templates.png)
 
 ::: moniker-end  
 
-::: moniker range="azure-devops"  
+::: moniker range=">= tfs-2017"
 
-> [!NOTE]   
-> To enable the new user interface for the Project Permissions Settings Page, see [Enable preview features](../project/navigation/preview-features.md).
+## View and edit all notification subscriptions
 
-#### [Preview page](#tab/preview-page) 
+This view shows all notification subscriptions that you've created or that were created by an administrator. Notification subscriptions let you control what you get notified about. Subscribed notifications are indicated with the State as **On**.
+
+::: moniker-end  
+
+::: moniker range="azure-devops"
+
+To access the Preview features options, open your profile menu. The profile menu appears, as shown, based on whether the **New Account Manager** feature is enabled.
+
+#### [New Account Manager enabled](#tab/new-account-enabled) 
 
 > [!div class="mx-imgBorder"]  
-> ![Personal notification subscriptions](media/unsubscribe-personal-notifications-preview.png)
+> ![Personal notification subscriptions, preview page.](media/unsubscribe-personal-notifications-preview.png)
 
-#### [Current page](#tab/current-page) 
+#### [New Account Manager not enabled](#tab/new-account-not-enabled)
 
 > [!div class="mx-imgBorder"]  
-> ![Personal notification subscriptions](media/unsubscribe-personal-notifications-newnav.png)
+> ![Personal notification subscriptions, current page.](media/unsubscribe-personal-notifications-newnav.png)
 
 ***
 
 ::: moniker-end  
 
-::: moniker range=">= tfs-2017 <= azure-devops-2019"  
+::: moniker range=">= tfs-2017 < azure-devops"
 
-<img src="media/unsubscribe-personal-notifications.png" alt="Personal notification subscriptions" style="border: 2px solid #C3C3C3;" />  
+:::image type="content" source="media/unsubscribe-personal-notifications.png" alt-text="Screenshot of unsubscribe from notification subscriptions.":::
 
 ::: moniker-end
 
-::: moniker range=">= tfs-2017"   
+::: moniker range=">= tfs-2017"
 
-A subscription can be just for you, or if you're a team admin, can be shared by everyone in the team.
-
-::: moniker-end  
-
-::: moniker range=">= tfs-2017"  
-
-## Add a custom subscription
-
-With custom personal subscriptions, you can define precise criteria for the events you want to receive notifications. A custom subscription can notify you about any event. Default subscriptions differ, as they only notify users or groups directly associated with an event.
+A notification subscription can be just for you. Or, if you're a team administrator you can ensure that it's shared by everyone on the team.
 
 ::: moniker-end  
 
-::: moniker range="azure-devops"  
+::: moniker range=">= tfs-2017"
 
-> [!NOTE]   
-> To enable the new user interface for the Project Permissions Settings Page, see [Enable preview features](../project/navigation/preview-features.md).
+## Add a custom notification subscription
 
-#### [Preview page](#tab/preview-page) 
+With custom personal notification subscriptions, you can define precise criteria for the events that you want to receive notifications. A custom notification subscription can notify you about any event. Default notification subscriptions differ, as they only notify users or groups directly associated with an event.
 
-1. From your Notifications page, select **New subscription**.
+::: moniker-end  
 
-	![Open the new subscriptions dialog](media/manage-personal-notifications-new-subscription-preview.png)
+::: moniker range="azure-devops"
 
-2. Choose the category and template you want to use. For a list of supported templates, see [Default and supported notifications](oob-built-in-notifications.md).
+To access the Preview features options, open your profile menu. The profile menu appears, as shown, based on whether the **New Account Manager** feature is enabled.
 
-	Here we choose to get notified when a pull request is created within a specific project, Fabrikam Fiber.
+#### [New Account Manager enabled](#tab/new-account-enabled)
 
-	<img src="media/manage-personal-notifications-new-subscription-dialog-preview.png" alt="New subscription dialog" style="border: 2px solid #C3C3C3;" />
+1. From your **Notifications** page, select **New subscription**.
 
-3. Modify the description to help you identify the subscription later. Also choose an email address for notifications to be delivered to. By default, your preferred email address is used. optionally, include one or more fields to further specify the event criteria.
+   ![Screenshot of New notification subscription selected.](media/manage-personal-notifications-new-subscription-preview.png)
 
-	<img src="media/manage-personal-notifications-complete-pull-request-subscription-preview.png" alt="Updated subscription dialog with field criteria" style="border: 2px solid #C3C3C3;" />
+1. Choose the category and template that you want to use, and then select **Next**. For a list of supported templates, see [Default and supported notifications](oob-built-in-notifications.md).
 
-	> [!NOTE]   
-	> The fields available for filtering event criteria differ depending on the category and template you select.   
+   Here we choose to get notified when a pull request is created within a specific project, Fabrikam Fiber.
 
-4. Select **Finish** when you're done. The subscription now appears in the list under the category you selected.
+   :::image type="content" source="media/manage-personal-notifications-new-subscription-dialog-preview.png" alt-text="Screenshot of new notification subscription-selected category and template.":::
 
-	<img src="media/manage-personal-notifications-subscription-added-preview.png" alt="New subscription added" style="border: 2px solid #C3C3C3;" />
+1. Modify the description to help you identify the notification subscription later. Also, choose an email address for the notifications to be delivered to. By default, your preferred email address is used. Optionally, include one or more fields to further specify the event criteria. Select **Finish** when you're done.
 
-#### [Current page](#tab/current-page) 
+   :::image type="content" source="media/manage-personal-notifications-complete-pull-request-subscription-preview.png" alt-text="Screenshot of updated notification subscription dialog with field criteria.":::
 
-1. From your Notifications page, select **New subscription**.
+   > [!NOTE]
+   > The fields available for filtering event criteria differ depending on the category and template that you select. For more information about event types, see [Supported event types](oob-supported-event-types.md).
 
-   <img src="media/manage-personal-notifications-new-subscription-newnav.png" alt="Open the new subscription dialog" style="border: 2px solid #C3C3C3;" />
+   The new notification subscription appears in the list under the category that you selected.
 
-2. Choose the category and template you want to use. For a list of supported templates, see [Default and supported notifications](oob-built-in-notifications.md).
+   :::image type="content" source="media/manage-personal-notifications-subscription-added-preview.png" alt-text="Screenshot of confirmation of new subscription added.":::
 
-	Here we choose to get notified when a pull request is created within a specific project, Fabrikam Fiber.
+#### [New Account Manager not enabled](#tab/new-account-not-enabled)
 
-	<img src="media/manage-personal-notifications-new-subscription-dialog.png" alt="New subscription dialog" style="border: 2px solid #C3C3C3;" />
+1. From your **Notifications** page, select **New subscription**.
 
-3. Modify the description to help you identify the subscription later. Also choose an email address for notifications to be delivered to. By default, your preferred email address is used. optionally, include one or more fields to further specify the event criteria.
+   :::image type="content" source="media/manage-personal-notifications-new-subscription-newnav.png" alt-text="Screenshot of the personal new notification subscription dialog, current page.":::
 
-	<img src="media/manage-personal-notifications-complete-pull-request-subscription.png" alt="Updated subscription dialog with field criteria" style="border: 2px solid #C3C3C3;" />
+1. Choose the category and template you want to use. For a list of supported templates, see [Default and supported notifications](oob-built-in-notifications.md).
 
-	> [!NOTE]   
-	> The fields available for filtering event criteria differ depending on the category and template you select.   
+   Here we choose to get notified when a pull request is created within a specific project, Fabrikam Fiber.
 
-4. Select **Finish** when you're done. The subscription now appears in the list under the category you selected.
+    :::image type="content" source="media/manage-personal-notifications-new-subscription-dialog.png" alt-text="Screenshot of personal notifications new notification subscription dialog.":::
 
-	<img src="media/manage-personal-notifications-subscription-added.png" alt="New subscription added" style="border: 2px solid #C3C3C3;" />
+1. Modify the description to help you identify the notification subscription later. Also, choose an email address for the notifications to be delivered to. By default, your preferred email address is used. Optionally, include one or more fields to further specify the event criteria.
+
+   :::image type="content" source="media/manage-personal-notifications-complete-pull-request-subscription.png" alt-text="Screenshot of new notification subscription event criteria.":::
+
+   > [!NOTE]
+   > The fields available for filtering event criteria differ depending on the category and template that you select. For more information about event types, see [Supported event types](oob-supported-event-types.md).  
+
+1. Select **Finish** when you're done. The notification subscription appears on the list under the category that you selected.
+
+   :::image type="content" source="media/manage-personal-notifications-subscription-added.png" alt-text="Screenshot showing the notification subscription on the list under its category.":::
 
 ::: moniker-end  
 
 ***
 
+::: moniker range=">= tfs-2017 <= tfs-2018"
 
+   :::image type="content" source="media/manage-personal-notifications-new-subscription.png" alt-text="Screenshot of the new notification subscription.":::
 
-::: moniker range=">= tfs-2017 <= tfs-2018"  
+1. Choose the category and template that you want to use. For a list of supported templates, see [Default and supported notifications](oob-built-in-notifications.md).
 
-   <img src="media/manage-personal-notifications-new-subscription.png" alt="Open the new subscription dialog" style="border: 2px solid #C3C3C3;" />
+   Here we choose to get notified when a pull request is created within a specific project, Fabrikam Fiber.
 
-2. Choose the category and template you want to use. For a list of supported templates, see [Default and supported notifications](oob-built-in-notifications.md).
+   :::image type="content" source="media/manage-personal-notifications-new-subscription-dialog.png" alt-text="New notification subscription dialog.":::
 
-	Here we choose to get notified when a pull request is created within a specific project, Fabrikam Fiber.
+1. Modify the description to help you identify the notification subscription later. Also, choose an email address for notifications to be delivered to. By default, your preferred email address is used. Optionally, include one or more fields to further specify the event criteria.
 
-	<img src="media/manage-personal-notifications-new-subscription-dialog.png" alt="New subscription dialog" style="border: 2px solid #C3C3C3;" />
+   :::image type="content" source="media/manage-personal-notifications-complete-pull-request-subscription.png" alt-text="Updated notification subscription dialog with field criteria.":::
 
-3. Modify the description to help you identify the subscription later. Also choose an email address for notifications to be delivered to. By default, your preferred email address is used. optionally, include one or more fields to further specify the event criteria.
+   > [!NOTE]
+   > The fields available for filtering event criteria differ depending on the category and template that you select.
 
-	<img src="media/manage-personal-notifications-complete-pull-request-subscription.png" alt="Updated subscription dialog with field criteria" style="border: 2px solid #C3C3C3;" />
+1. Select **Finish** when you're done. The notification subscription appears in the list under the category that you selected.
 
-	> [!NOTE]   
-	> The fields available for filtering event criteria differ depending on the category and template you select.   
+   :::image type="content" source="media/manage-personal-notifications-subscription-added.png" alt-text="New subscription added.":::
 
-4. Select **Finish** when you're done. The subscription now appears in the list under the category you selected.
+::: moniker-end
 
-	<img src="media/manage-personal-notifications-subscription-added.png" alt="New subscription added" style="border: 2px solid #C3C3C3;" />
+[!INCLUDE [opt-out-notification](includes/opt-out-notification.md)]
 
-::: moniker-end  
+## Next steps
 
-
-
-
-::: moniker range=">= tfs-2017"  
-
-## Unsubscribe or opt out of a team or OOB subscription
-
-You can choose to not receive notifications for certain team subscriptions by opting out of the subscription.
-
-To unsubscribe from any notification, even one that you've defined, slide the State **On/Off** indicator to the Off position.
- 
-For example, here we turn off the Build completes subscription.
-
-<img src="media/unsubscribe-from-build-completes-preview.png" alt="Unsubscribe from Build completes subscription" style="border: 2px solid #C3C3C3;" />
-
-> [!NOTE]  
-> Whether you are an administrator or not, toggling a shared team subscription from your notification settings only impacts you and not other team members.
-
-::: moniker-end  
-
+> [!div class="nextstepaction"]
+> [Use @ mentions in work items and pull requests](at-mentions.md)
 
 ## Related articles
 
+- [Manage your personal notifications](manage-your-personal-notifications.md)
 - [Set your preferences](../organizations/settings/set-your-preferences.md)
 - [Default and supported notifications](oob-built-in-notifications.md)
 - [Follow a specific work item](../boards/work-items/follow-work-items.md)  
-- [Manage notifications for a team](manage-team-group-notifications.md)  
 - [Change your preferred email address](change-email-address.md)
 
 ### Limitations
 
-* The user interface no longer supports creating plain text email subscriptions.
-
-
-
+The user interface no longer supports creating plain text email notification subscriptions.
 
 <!--- TFS 2017 Update 1 settings 
 
@@ -281,7 +274,7 @@ To manage your notification settings, select the Notifications option under the 
 	
 ![Access personal notifications settings via the profile menu](../project/wiki/media/personal-profile-menu.png)
 
-Learn more about [team subscriptions](manage-team-notifications.md).
+Learn more about [team subscriptions](./manage-team-group-global-organization-notifications.md).
 
 ![Personal notification settings](../project/wiki/media/personal-notifications.png)
 

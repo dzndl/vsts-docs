@@ -2,10 +2,7 @@
 title: Deploy an Azure VM using an RM template
 description: Provision Azure virtual machines (VMs) using ARM templates by using Azure Pipelines or Team Foundation Server (TFS) 
 ms.assetid: E6CF9C79-4A2A-45EF-8278-EA6AFA81CBAD
-ms.prod: devops
-ms.technology: devops-cicd
 ms.topic: conceptual
-ms.manager: mijacobs
 ms.custom: seodec18
 ms.author: ronai
 author: RoopeshNair
@@ -22,7 +19,7 @@ monikerRange: '>= tfs-2015'
 ::: moniker-end
 
 In just a few steps, you can provision Azure virtual machines (VMs)
-using [Resource Manager (RM) templates](https://azure.microsoft.com/documentation/articles/resource-group-template-deploy/).
+using [Resource Manager (RM) templates](/azure/azure-resource-manager/templates/deploy-powershell).
 Managing the pipelines for virtual machines in this
 way is considered **Infrastructure as code** and is
 a good DevOps practice.

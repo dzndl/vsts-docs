@@ -2,15 +2,10 @@
 title: Build your GCC C/C++ app
 ms.custom: seodec18
 description: Learn how you can use continuous integration in Azure Pipelines or Team Foundation Server (TFS) to automatically build your GCC C/C++ app.
-ms.prod: devops
-ms.technology: devops-cicd
 ms.assetid: 73a50551-0c2c-4d62-b582-6ba7ba51509e
-ms.manager: mijacobs
-ms.author: jukullam
 ms.date: 04/18/2018
 ms.topic: quickstart
 monikerRange: '>= tfs-2017'
-author: juliakm
 ---
 
 # Build your GCC C/C++ app
@@ -57,11 +52,13 @@ https://github.com/adventworks/cpp-gpp-sample
 
    # [Azure Repos or TFS repo](#tab/vsts)
 
-   Navigate to the **Files** tab of the **Code** hub, and then click **Set up build**.
+   Under the **Build and Release** menu, select **Builds** then **New** to create a new build definition.
 
-   ![Screenshot showing button to set up build for a repository](../media/set-up-first-build-from-code-hub.png)
+   :::image type="content" source="../media/set-up-first-build.png" alt-text="Create a new build definition for a repository":::
 
-   You are taken to **Azure Pipelines** and asked to **Select a template** for the new build pipeline.
+   Select a source and chose your team project, repository, and default branch then select **Continue**.
+    
+   **Select a template** or start with an **Empty process** to create your build pipeline.
 
    # [GitHub repo](#tab/github)
 

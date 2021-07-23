@@ -3,21 +3,18 @@ title: 11 reasons to start using Azure Boards
 titleSuffix: Azure Boards & TFS 
 description: Understand why to use Azure Boards to track your issues, user stories, bugs, tasks, and other work  
 ms.custom: "boards-get-started, seodec18"
-ms.prod: devops
 ms.technology: devops-new-user
-ms.assetid:  
-ms.manager: mijacobs
 ms.author: kaelli
 author: KathrynEE
-ms.topic: overview
-monikerRange: '>= tfs-2013'
+ms.topic: conceptual
+monikerRange: '<= azure-devops'
 ms.date: 01/11/2019
 ---
 
 
 # 11 Reasons for using Azure Boards to plan and track your work 
 
-[!INCLUDE [temp](../includes/version-vsts-tfs-all-versions.md)]
+[!INCLUDE [temp](../includes/version-all.md)]
 
 We know you have a choice of tracking systems. So why use Azure Boards to plan and track your work, bugs, and customer issues? 
 
@@ -78,9 +75,9 @@ As your project grows, the number of work items used to track it grows. To suppo
 
 - A follow feature so you can [follow work items](../work-items/follow-work-items.md) to monitor updates and changes
 - [Pivot views](../work-items/view-add-work-items.md ) that show you work items assigned to you, that you elected to follow, were recently modified, and more  
-- A powerful [query engine](../queries/example-queries.md) that filters work item lists based on any field and used to update or triage work items
+- A powerful [query engine](../queries/about-managed-queries.md) that filters work item lists based on any field and used to update or triage work items
 - Fast, flexible [ad-hoc search](../queries/search-box-queries.md) with quick inline filters 
-- Alert management settings so you can [personalize the alerts](../../notifications/howto-manage-personal-notifications.md) you receive when work items are assigned to you or are changed, or other filter criteria
+- Alert management settings so you can [personalize the alerts](../../notifications/manage-your-personal-notifications.md) you receive when work items are assigned to you or are changed, or other filter criteria
 
 
 ## 7. Monitor status and progress with built-in dashboards and analytics  
@@ -97,10 +94,17 @@ In addition to dashboards, you have access to the [Analytics service](../../repo
 
 ## 8. Office integration 
 
-Project managers who want to use familiar tools can import and export work item queries to and from Microsoft Office Excel and Project. To learn more, see: 
+::: moniker range=">= azure-devops-2019"
+Project managers who want to use familiar tools can import and export work item queries to and from Microsoft Office Excel or import and export work items using .csv files. To learn more, see: 
+- [Bulk import or update work items using CSV files](../queries/import-work-items-from-csv.md)
 - [Bulk add or modify work items with Excel](../backlogs/office/bulk-add-modify-work-items-excel.md)
-- [Create your backlog and tasks by using Project](../backlogs/office/create-your-backlog-tasks-using-project.md)
 
+::: moniker-end
+::: moniker range="<= tfs-2018"
+
+Project managers who want to use familiar tools can import and export work item queries to and from Microsoft Office Excel. To learn more, see [Bulk add or modify work items with Excel](../backlogs/office/bulk-add-modify-work-items-excel.md). 
+
+::: moniker-end
 
 ## 9. Extensions and extensibility  
 
@@ -130,4 +134,5 @@ Get started today. To learn how, see [Sign up for free and invite others to coll
 
 ## Related articles
 
+- [Best practices for Agile project management](../best-practices-agile-project-management.md)
 - [Best tool to add, update, and link work items](../work-items/best-tool-add-update-link-work-items.md)

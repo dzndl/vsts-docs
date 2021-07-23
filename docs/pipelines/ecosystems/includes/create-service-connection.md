@@ -1,3 +1,12 @@
+---
+ms.topic: include
+ms.technology: devops-cicd
+ms.manager: mijacobs
+ms.author: jukullam
+author: juliakm
+ms.date: 02/13/2020
+---
+
 Now create the service connection:
 
 1. From your project dashboard, select **Project settings** on the bottom left.
@@ -15,4 +24,4 @@ Now create the service connection:
    ![New service connection dialog box](../media/add-service-connection-dialog-box.png)
 
 > [!Tip]
-> If you need to create a connection to an Azure subscription that's owned by someone else, see [Create an Azure Resource Manager service connection with an existing service principal](https://docs.microsoft.com/azure/devops/pipelines/library/connect-to-azure?view=azure-devops#create-an-azure-resource-manager-service-connection-with-an-existing-service-principal).
+> If you need to create a connection to an Azure subscription that's owned by someone else, see [Create an Azure Resource Manager service connection with an existing service principal](../../library/connect-to-azure.md#create-an-azure-resource-manager-service-connection-with-an-existing-service-principal).

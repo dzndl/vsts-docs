@@ -2,10 +2,8 @@
 title: Create manual tests
 description: Test tools - Create manual tests in Azure DevOps and TFS to make sure each of the deliverables meets your users needs
 ms.assetid: C3C10A82-C7F2-4AB6-9CED-B43DAF722800
-ms.prod: devops
 ms.technology: devops-test
 ms.topic: quickstart
-ms.manager: mijacobs
 ms.author: sdanie
 author: steved0x
 ms.date: 12/07/2018
@@ -83,7 +81,7 @@ the tests.
    ![Send emails to testers](media/create-test-cases/AssignMultipleTestersEmail.png)
 
    The email contains a link that testers can open to see the list of assigned tests.
-   Testers need just [Basic access](https://visualstudio.microsoft.com/products/visual-studio-online-Basic-vs)
+   Testers need just [Basic access](../organizations/security/access-levels.md)
    to run tests from Azure Test Plans.
 
 ## See also

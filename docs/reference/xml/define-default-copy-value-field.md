@@ -2,12 +2,12 @@
 title: Define default value or copy a value 
 titleSuffix: TFS
 description: Syntax and usage for the COPY, DEFAULT, and SERVERDEFAULT elements  
-ms.prod: devops
 ms.technology: devops-agile
+ms.custom: process
 ms.assetid: 35c3fcdb-8399-406d-bb8b-179bb543c9ba
 ms.author: kaelli
-ms.manager: mijacobs
-ms.manager: mijacobs
+author: KathrynEE
+monikerRange: '< azure-devops'
 ms.date: 04/05/2017
 ---
 
@@ -117,5 +117,5 @@ You can specify a default value for a field, or you can copy the value from anot
   
 ## Related articles 
 -  [All FIELD elements](all-field-xml-elements-reference.md)   
--  [Apply a field rule](apply-rule-work-item-field.md)   
+-  [Rules and rule evaluation](../../organizations/settings/work/rule-reference.md)   
 -  [Modify a field or add a custom field](../add-modify-field.md)

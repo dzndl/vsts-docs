@@ -2,13 +2,11 @@
 title: TF30277-You do not have sufficient permissions...
 titleSuffix: Azure DevOps & TFS
 description: Occurs when the permissions are not sufficient to allow the user to create a new SharePoint Services site.
-ms.prod: devops
 ms.technology: devops-agile
 ms.manager: mijacobs0-5dfc-4152-abf4-32b02ba51d36
-ms.manager: mijacobs
 ms.author: kaelli
 author: KathrynEE
-ms.topic: Troubleshooting
+ms.topic: troubleshooting
 ms.date: 01/20/2017
 ---
 

@@ -2,16 +2,14 @@
 title: Pipeline pass rate sample Power BI report 
 titleSuffix: Azure DevOps
 description: How-to guide to generate a pipeline pass rate Power BI report  
-ms.prod: devops
 ms.technology: devops-analytics
 ms.reviewer: ravishan
-ms.manager: mijacobs
 ms.author: kaghai
 ms.custom: powerbisample
 author: KathrynEE
 ms.topic: sample
-monikerRange: '>= azure-devops'   
-ms.date: 12/10/2019
+monikerRange: '>= azure-devops-2020'      
+ms.date: 12/18/2020
 ---
 
 # Pipeline pass rate trend sample report 
@@ -29,6 +27,7 @@ The following image shows an example of such a trend.
 
 [!INCLUDE [temp](includes/sample-required-reading.md)]
 
+[!INCLUDE [temp](./includes/prerequisites-power-bi-2020.md)]
 
 ## Sample queries
 
@@ -194,7 +193,7 @@ The query doesn't return all the columns in the format in which you can directly
 1. Change the type of column **TotalCount** to **Whole Number**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Power BI + OData - change column type](media/odatapowerbi-pipelines/passratetrend-changecolumntype2.png)
+    > ![Change the type of column TotalCount to Whole Number.](media/odatapowerbi-pipelines/passratetrend-changecolumntype2.png)
 
 
 ### Rename fields and query, then Close & Apply
@@ -436,6 +435,8 @@ You may want to view the pass rate trend for all the pipelines of the project in
 - Expand Pipeline into  Pipeline.PipelineName  
 - Select Power BI Visualization **Slicer** and add the field Pipeline.PipelineName to the slicer's **Field**  
 - Select the Build pipeline from the slicer for which you need to see the outcome summary
+
+Refer [Outcome summary for all pipelines](sample-pipelines-allpipelines.md) sample report which has detailed similar steps as required here.
 
 #### [Power BI query](#tab/powerbi/)
 

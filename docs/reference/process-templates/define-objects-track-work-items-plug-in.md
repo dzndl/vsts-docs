@@ -2,14 +2,12 @@
 title: Define work item types for a process template 
 titleSuffix: Azure DevOps & TFS
 description: Use the plug-in for tracking work items and defining a project's initial objects for tracking work for Team Foundation Server 
-ms.prod: devops
 ms.technology: devops-agile
 ms.assetid: 6d6103d6-2558-460c-b022-9eda2ffe4023
-ms.manager: mijacobs
 ms.author: kaelli
 author: KathrynEE
 ms.topic: reference
-monikerRange: '>= tfs-2013 <= azure-devops-2019'
+monikerRange: '< azure-devops-2019'
 ms.date: 09/08/2017
 ---
 
@@ -103,7 +101,10 @@ The names of the file, the folder, and the plug-in for the default process templ
 > </tasks>  
 > ```  
   
-##  <a name="elements"></a> Element reference  
+<a name="elements"></a> 
+
+##  Element reference 
+
  The following table describes the elements that you use to upload work item tracking objects. You specify these elements within a **taskXml** container element in the WorkItemTracking plug-in file. For information about the task, dependency, and taskXml elements, see [Define the tasks to process a plug-in](define-tasks-to-process-a-plug-in.md).  
   
 |Element|Syntax|Description|  
@@ -122,7 +123,8 @@ The names of the file, the folder, and the plug-in for the default process templ
 |**WORKITEMTYPE**|`<WORKITEMTYPE fileName="WITFilePathName" />`|Required child element of **WORKITEMTYPES**.<br /><br /> Specifies the path and name of the file that contains a type definition to upload.|  
 |**WORKITEMTYPES**|`<WORKITEMTYPES>      <WORKITEMTYPE />  . . . </WORKITEMTYPES>`|Required child element of the WorkItemTracking plug-in.<br /><br /> Contains a collection of **WORKITEMTYPE** elements that each specify a definition file to upload.|  
   
-## Related articles  
- [Customize a process](customize-process.md)   
- [Customize your work tracking experience](../customize-work.md)   
- [Overview of process template files](overview-process-template-files.md)
+## Related articles 
+ 
+- [Customize a process](customize-process.md)   
+- [Customize your work tracking experience](../customize-work.md)   
+- [Overview of process template files](overview-process-template-files.md)

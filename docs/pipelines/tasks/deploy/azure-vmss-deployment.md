@@ -2,8 +2,6 @@
 title: Azure virtual machine scale set deployment task
 description: Deploy virtual machine scale set image
 ms.topic: reference
-ms.prod: devops
-ms.technology: devops-cicd
 ms.assetid: 4dda660c-b643-4598-a4a2-61080d0002d9
 ms.manager: dastahel
 ms.custom: seodec18
@@ -17,7 +15,7 @@ monikerRange: 'azure-devops'
 
 **Azure Pipelines**
 
-Use this task in a build or release pipeline to deploy a virtual machine scale set image.
+Use this task to deploy a virtual machine scale set image.
 
 ::: moniker range="> tfs-2018"
 
@@ -47,6 +45,27 @@ Use this task in a build or release pipeline to deploy a virtual machine scale s
 </tr>
 
 </table>
+
+
+## Troubleshooting
+
+### Error: 'Permission denied: Script is not executable'
+
+This issue occurs if you try to run a custom script, but the script isn't executable. 
+
+To resolve the issue, first make sure that the `customScript` input doesn't have `./` or anything else before the script name `'test.sh'`:
+
+```yml
+    customScript: 'test.sh'
+```
+
+Next, try adding a command line task before the virtual machine scale set task:
+
+```yml
+    - task: CmdLine@2
+      inputs:
+        script: 'chmod 777 $(System.DefaultWorkingDirectory)/test.sh' 
+```
 
 ## Open source
 

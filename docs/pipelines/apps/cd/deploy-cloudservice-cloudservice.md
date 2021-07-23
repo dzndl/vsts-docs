@@ -2,10 +2,7 @@
 title: Deploy an ASP.NET Cloud Service app 
 description: Example of deploying an Azure cloud services package in Azure Pipelines or Team Foundation Server
 ms.assetid: 2FFE372F-0F5A-4B8C-9AEE-5D8E4F61F6F5
-ms.prod: devops
-ms.technology: devops-cicd
 ms.topic: conceptual
-ms.manager: mijacobs
 ms.custom: seodec18
 ms.author: ronai
 author: RoopeshNair
@@ -84,7 +81,7 @@ Continuous deployment (CD) means starting an automated release pipeline whenever
    ![Selecting the build artifact](../media/confirm-or-add-artifact.png)
 
 1. Choose the **Continuous deployment** icon in the **Artifacts** section, check that the continuous deployment trigger is enabled,
-   and add a filter to include the **master** branch.
+   and add a filter to include the **main** branch.
 
    ![Checking or setting the Continuous deployment trigger](../media/confirm-or-set-cd-trigger.png)
 
@@ -106,7 +103,7 @@ You're now ready to create a release, which means to run the release pipeline wi
 
 [!INCLUDE [simple-create-release](../includes/simple-create-release.md)]
 
-## Q & A
+## FAQ
 
 <!-- BEGINSECTION class="md-qanda" -->
 

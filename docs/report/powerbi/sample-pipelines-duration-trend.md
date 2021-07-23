@@ -2,16 +2,14 @@
 title: Pipeline duration trend sample Power BI report 
 titleSuffix: Azure DevOps
 description: How-to guide to generate a pipeline duration trend Power BI report  
-ms.prod: devops
 ms.technology: devops-analytics
 ms.reviewer: ravishan
-ms.manager: mijacobs
 ms.author: kaghai
 ms.custom: powerbisample
 author: KathrynEE
 ms.topic: sample
-monikerRange: '>= azure-devops'  
-ms.date: 12/10/2019
+monikerRange: '>= azure-devops-2020'     
+ms.date: 12/18/2020
 ---
 
 # Pipeline duration trend sample report 
@@ -29,6 +27,7 @@ The following image shows an example of such a chart.
 
 [!INCLUDE [temp](includes/sample-required-reading.md)]
 
+[!INCLUDE [temp](./includes/prerequisites-power-bi-2020.md)]
 
 ## Sample queries
 
@@ -362,6 +361,8 @@ You may want to view the duration trend for all the pipelines of the project in 
 - Expand Pipeline into Pipeline.PipelineName
 - Select Power BI Visualization **Slicer** and add the field Pipeline.PipelineName to the slicer's **Field**
 - Select the Build pipeline from the slicer for which you need to see the trend of pipeline pass rate 
+
+Refer [Outcome summary for all pipelines](sample-pipelines-allpipelines.md) sample report which has detailed similar steps as required here.
 
 #### [Power BI query](#tab/powerbi/)
 

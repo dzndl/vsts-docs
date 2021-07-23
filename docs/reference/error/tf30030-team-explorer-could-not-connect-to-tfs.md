@@ -2,13 +2,11 @@
 title: TF30030-Team Explorer could not connect... 
 titleSuffix: Azure DevOps & TFS
 description: Occurs when Team Explorer is not synchronized with or cannot establish a connection to the server that hosts SharePoint Products.
-ms.prod: devops
 ms.technology: devops-agile
 ms.manager: mijacobsf-718f-4dc0-b77a-6c596c9fff1d
-ms.manager: mijacobs
 ms.author: kaelli
 author: KathrynEE
-ms.topic: Troubleshooting
+ms.topic: troubleshooting
 ms.date: 02/22/2017
 ---
 

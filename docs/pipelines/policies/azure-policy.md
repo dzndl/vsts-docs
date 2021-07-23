@@ -2,11 +2,8 @@
 title: Enforce Azure Policy compliance
 description: Understand how to use Azure Policy in Azure Pipelines
 ms.assetid: 3B51122B-7354-467C-93B8-A20D81AFFADE
-ms.prod: devops
-ms.technology: devops-cicd
 ms.topic: conceptual
 ms.custom: seodec18
-ms.manager: mijacobs
 ms.author: atulmal
 author: azooinmyluggage
 ms.date: 03/21/2019
@@ -24,19 +21,19 @@ Policies can be applied to an entire subscription, a management group, or a reso
 
 This tutorial guides you in enforcing compliance policies on your resources before and after deployment during the release process through Azure Pipelines.
 
-For more information, see [What is Azure Policy?](https://docs.microsoft.com/azure/governance/policy/overview)
-and [Create and manage policies to enforce compliance](https://docs.microsoft.com/azure/governance/policy/tutorials/create-and-manage).
+For more information, see [What is Azure Policy?](/azure/governance/policy/overview)
+and [Create and manage policies to enforce compliance](/azure/governance/policy/tutorials/create-and-manage).
 
 ## Prepare
 
-1. Create an [Azure Policy](https://docs.microsoft.com/azure/governance/policy/tutorials/create-and-manage) in the Azure portal.
-   There are several [pre-defined sample policies](https://docs.microsoft.com/azure/governance/policy/samples/)
+1. Create an [Azure Policy](/azure/governance/policy/tutorials/create-and-manage) in the Azure portal.
+   There are several [pre-defined sample policies](/azure/governance/policy/samples/)
    that can be applied to a management group, subscription, and resource group.
 
 1. In Azure DevOps create a release pipeline that contains at least one stage, or open an existing release pipeline.
 
 1. Add a pre- or post-deployment condition that includes the **Security and compliance assessment** task as a gate.
-   [More details](../release/deploy-using-approvals.md#configure-a-gate).
+   [More details](../release/deploy-using-approvals.md#configure-gate).
 
    ![Azure Policy Gate](media/azure-policy/azure-policy-gate.png)
 

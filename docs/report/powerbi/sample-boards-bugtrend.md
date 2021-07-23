@@ -2,10 +2,8 @@
 title: Bug trends sample Power BI report 
 titleSuffix: Azure DevOps
 description: Sample Power BI queries to display bug trend reports  
-ms.prod: devops
 ms.technology: devops-analytics
 ms.reviewer: greggboe
-ms.manager: mijacobs
 ms.author: kaelli
 ms.custom: powerbisample
 author: KathrynEE
@@ -24,6 +22,8 @@ This article shows you how to display, for a given set of open Bugs, the number 
 > ![Sample - Boards Rollup - Report](media/odatapowerbi-bugtrend-report.png)
 
 [!INCLUDE [temp](includes/sample-required-reading.md)]
+
+[!INCLUDE [temp](./includes/prerequisites-power-bi.md)]
 
 
 ## Sample queries

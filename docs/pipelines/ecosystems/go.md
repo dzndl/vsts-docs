@@ -1,16 +1,11 @@
 ---
 title: Build and test Go projects 
 description: Build and test Go projects with Azure Pipelines & Azure DevOps
-ms.prod: devops
-ms.technology: devops-cicd
 ms.topic: quickstart
 ms.assetid: a72557df-6df4-4fb6-b437-be0730624e3c
-ms.manager: mijacobs
-ms.author: jukullam
-author: juliakm
 ms.reviewer: azooinmyluggage
 ms.custom: seodec18
-ms.date: 12/31/2019
+ms.date: 07/15/2021
 monikerRange: 'azure-devops'
 ---
 
@@ -126,7 +121,6 @@ When an Azure Pipelines build fetches code from a remote repository, it places t
 ```yaml
 variables:
   GOBIN:  '$(GOPATH)/bin' # Go binaries path
-  GOROOT: '/usr/local/go1.13' # Go installation path
   GOPATH: '$(system.defaultWorkingDirectory)/gopath' # Go workspace path
   modulePath: '$(GOPATH)/src/github.com/$(build.repository.name)' # Path to the module's code
 
@@ -139,7 +133,6 @@ steps:
     shopt -s dotglob
     mv !(gopath) '$(modulePath)'
     echo '##vso[task.prependpath]$(GOBIN)'
-    echo '##vso[task.prependpath]$(GOROOT)/bin'
   displayName: 'Set up the Go workspace'
 
 - script: |
@@ -178,7 +171,10 @@ Use `go get` to download the source code for a Go project or to install a tool i
 
 #### dep ensure
 
-Use `dep ensure` if your project uses dep to download dependencies imported in your code. Running `dep ensure` clones imported repositories into your project's vendor directory. Its `Gopkg.lock` and `Gopkg.toml` files guarantee that everyone working on the project uses the same version of dependencies as your build. Add the following snippet to your `azure-pipelines.yml` file. Note: this script runs in bash on Linux and macOS agents, but must be modified for Windows.
+Use `dep ensure` if your project uses dep to download dependencies imported in your code. Running `dep ensure` clones imported repositories into your project's vendor directory. Its `Gopkg.lock` and `Gopkg.toml` files guarantee that everyone working on the project uses the same version of dependencies as your build. Add the following snippet to your `azure-pipelines.yml` file. 
+
+> [!NOTE]
+> This script runs on Linux and macOS agents and can be used for older versions of Go that require a specific folder structure. The script is written for Unix shells, and as a result cannot work with Windows agents. 
 
 ```yaml
 - script: |
@@ -197,9 +193,10 @@ Use `dep ensure` if your project uses dep to download dependencies imported in y
 Use `go build` to build your Go project. Add the following snippet to your `azure-pipelines.yml` file:
 
 ```yaml
-- script: go build -v .
-  workingDirectory: '$(modulePath)'
-  displayName: 'Build'
+- task: Go@0
+  inputs:
+    command: 'build'
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
 ```
 
 ## Test
@@ -207,9 +204,11 @@ Use `go build` to build your Go project. Add the following snippet to your `azur
 Use `go test` to test your go module and its subdirectories (`./...`). Add the following snippet to your `azure-pipelines.yml` file:
 
 ```yaml
-- script: go test -v ./...
-  workingDirectory: '$(modulePath)'
-  displayName: 'Run tests'
+- task: Go@0
+  inputs:
+    command: 'test'
+    arguments: '-v'
+    workingDirectory: '$(modulePath)'
 ```
 
 ## Build an image and push to container registry

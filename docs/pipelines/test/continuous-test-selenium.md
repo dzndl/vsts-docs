@@ -2,13 +2,10 @@
 title: Perform UI tests with Selenium
 description: UI Testing with Selenium in a continuous deployment pipeline in Azure Pipelines and Team Foundation Server TFS
 ms.assetid: 1B90D2DF-4AB0-4B65-8039-2B14A25FB547
-ms.prod: devops
-ms.technology: devops-cicd
 ms.topic: conceptual
 ms.custom: continuous-test, seodec18
-ms.manager: mijacobs
-ms.author: pbora
-author: pboraMSFT
+ms.author: shashban
+author: shashban
 ms.date: 03/15/2019
 monikerRange: '>= tfs-2015'
 ---
@@ -37,8 +34,8 @@ app is deployed (usually to a QA environment).
 
 For more information about Selenium browser automation, see:
 
-* [Selenium HQ](https://www.seleniumhq.org/)
-* [Selenium documentation](https://www.seleniumhq.org/docs/)
+* [Selenium](https://www.selenium.dev/)
+* [Selenium documentation](https://www.selenium.dev/documentation)
 
 <a name="create-project"></a>
 ## Create your test project
@@ -164,7 +161,7 @@ from Visual Studio Test Explorer.
 ## Define your build pipeline
 
 You'll need a continuous integration (CI) build pipeline that builds your Selenium tests.
-For more details, see [Build your .NET desktop app for Windows](../apps/windows/dot-net.md).
+For more details, see [Build your .NET desktop app for Windows](../apps/aspnet/build-aspnet-4.md).
 
 ## Create your web app
 
